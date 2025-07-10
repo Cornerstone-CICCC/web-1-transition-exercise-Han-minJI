@@ -1,0 +1,64 @@
+.circle{
+  width: 150px;
+  height: 150px; 
+  border-radius: 50%;
+  background-color: yellow;
+
+  transition: all 0.5s linear;
+
+  animation: moveCircle 5s linear infinite;
+  position: fixed;
+}
+
+.circle:hover{
+  opacity: 0;
+}
+
+.loading{
+  width: 250px;
+  height: 50px;
+  border: 5px solid red;
+}
+
+.percent{
+  background-color: red;
+  animation: loading 3s linear infinite;
+}
+
+@keyframes loading{
+  0% {
+    width: 0;
+    height: 50px;
+  }
+
+  100% {
+    width: 250px;
+    height: 50px;
+  }
+}
+
+@keyframes moveCircle{
+  0%, 100% {
+    transform: rotate(0deg);
+    top: 0;
+    left: 0;
+  }
+
+  25% {
+    transform: rotate(5turn);
+    top: 0;
+    left: calc(100vw - 150px);
+  }
+
+  50% {
+    transform: rotate(10turn);
+    top: calc(100vh - 150px);
+    left: calc(100vw - 150px);
+  }
+
+  75%{
+    transform: rotate(15turn);
+    top: calc(100vh - 150px);
+    left: 0;
+  }
+}
